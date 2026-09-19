@@ -15,3 +15,10 @@
     - git add README.md
     - git commit -m "First Commit"
     - git status
+    - git branch -M main
+    - git remote add origin https://github.com/Vrushti-123/ML-Projects.git
+    - git remote -v
+    - git push -u origin main
+    Then reload the github page and you'll see your repo.
+
+
