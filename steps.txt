@@ -21,4 +21,20 @@
     - git push -u origin main
     Then reload the github page and you'll see your repo.
 
+4) Setting up: Creating setup.py --> this will be responsible for creating/building my ML application as a package.
+    we can install this package in our projects and use it.
+    then even deploy it in python py py --> anybody can install and use it.
+    - create two files: setup.py and requirements.txt
+    - create a folder called src
+    - create a file inside src --> __init__.py
 
+5) Inside requirements.txt --> "-e ."
+whenever we are trying to install the requirements.txt,
+at that time the setup.py should also run to build the packages.
+so, -e . --> this will trigger the setup.py file.
+
+So, when we type "pip install -r requirements.txt" 
+Now, because of the "-e ." --> mapped to setup.py --> automatically this entire package will get built.
+
+After running this command -->  we can see that a folder gets created by itself.
+mlproject.egg-info --> now we can use these package anywhere if we deploy it in py py.
