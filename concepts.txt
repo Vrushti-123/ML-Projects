@@ -1,0 +1,45 @@
+----------------SETUP.PY--------------------
+setup.py --> it turns your project into an 
+installable Python package and automatically 
+installs the libraries listed in requirements.txt.
+
+Its main purpose is to tell Python/pip:
+"This is my Python project. Here is its name, version, 
+author, package structure, and the external libraries it needs."
+
+the -e . tells pip:
+"Also install the current project."
+
+setuptools is a Python package used to build and install Python projects.
+It provides tools for packaging your project.
+
+---------------------------------------
+You have a proper Python application/package.
+You might want to import things like:
+"from mlproject.components.data_ingestion import DataIngestion"
+Packaging makes this project structure manageable and installable.
+
+PACKAGE:
+A package is basically a collection of Python code that you organize so Python can import and use it as a unit.
+MODULE:
+A module is basically one .py file.
+-------------------------------------------------------------------------
+__INIT__.PY:
+tells Python: "Treat this directory as a Python package."
+
+packages=find_packages()
+find_packages() searches for directories that are Python packages. 
+Traditionally, the presence of __init__.py --> is what tells it:
+"This directory is a package; include it when installing the project."
+
+"pip install mlproject" only works if mlproject is 
+available somewhere pip can find it — for example, PyPI, 
+a Git repository, or a local package.
+setup.py is basically the instruction sheet for pip about your package.
+When someone runs: pip install mlproject
+pip needs to know:
+“What exactly is mlproject? 
+Which Python packages/files should I install? 
+What dependencies does it need?”
+
+setup.py tells pip how to package and install YOUR project.
