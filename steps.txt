@@ -1,0 +1,17 @@
+1) Create a github repo
+    - Create a folder (i created ML Projects)
+    - Go to "anaconda prompt". and then cd to the folder path.
+    - then type "code ." --> this will create a vs code instance.
+
+2) We need to create a new environment.
+    - Wtv libraries we install, will get installed in this env only.
+    - type this in vsc terminal :
+    - conda create -p venv python==3.8 -y
+    - conda activate venv/
+
+3) Now we need to sync our folder with our github repo.
+    - git init (in our vsc terminal)
+    - then create a README.MD file in our folder manually.
+    - git add README.md
+    - git commit -m "First Commit"
+    - git status
