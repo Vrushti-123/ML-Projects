@@ -1,4 +1,5 @@
-----------------SETUP.PY--------------------
+---------------------------------SETUP.PY-------------------------------------------------------
+
 setup.py --> it turns your project into an 
 installable Python package and automatically 
 installs the libraries listed in requirements.txt.
@@ -13,7 +14,7 @@ the -e . tells pip:
 setuptools is a Python package used to build and install Python projects.
 It provides tools for packaging your project.
 
----------------------------------------
+---------
 You have a proper Python application/package.
 You might want to import things like:
 "from mlproject.components.data_ingestion import DataIngestion"
@@ -23,7 +24,8 @@ PACKAGE:
 A package is basically a collection of Python code that you organize so Python can import and use it as a unit.
 MODULE:
 A module is basically one .py file.
--------------------------------------------------------------------------
+----------------
+
 __INIT__.PY:
 tells Python: "Treat this directory as a Python package."
 
@@ -43,3 +45,52 @@ Which Python packages/files should I install?
 What dependencies does it need?”
 
 setup.py tells pip how to package and install YOUR project.
+-----------------------------------------------------------------------------------------------------
+
+
+So, when we type "pip install -r requirements.txt" 
+Now, because of the "-e ." --> mapped to setup.py --> automatically this entire package will get built.
+
+After running this command -->  we can see that a folder gets created by itself.
+mlproject.egg-info --> automatically generated packaging information created when you install your project.
+Think of it as metadata about your installed package.
+
+
+--------------------------PIPELINES----------------------------------
+The pipeline folder is basically where you put the code that controls the overall ML workflow.
+
+Think:
+components/
+    ↓
+individual tasks
+-----------------------
+pipeline/
+    ↓
+connects those tasks together
+
+
+train_pipeline.py
+
+Its job is to run the complete training process in the correct order.
+
+For example: for train_pipeline: 
+train_pipeline.py
+      ↓
+Data Ingestion
+      ↓
+Data Transformation
+      ↓
+Model Training
+      ↓
+Save trained model
+
+So instead of manually running each component, you can run one training pipeline.
+
+Why keep them in pipeline/?
+
+Because:
+components/
+→ "What individual ML tasks can I perform?"
+----------------
+pipeline/
+→ "How do I combine those tasks into a complete workflow?"

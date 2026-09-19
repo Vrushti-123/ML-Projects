@@ -33,8 +33,18 @@ whenever we are trying to install the requirements.txt,
 at that time the setup.py should also run to build the packages.
 so, -e . --> this will trigger the setup.py file.
 
-So, when we type "pip install -r requirements.txt" 
-Now, because of the "-e ." --> mapped to setup.py --> automatically this entire package will get built.
+6) create components folder inside the src folder.
+    then again create __init__.py inside components folder.
+    all our data manipulation files will be our separate "components"
+    all will contain their respective codes. for separate tasks.
 
-After running this command -->  we can see that a folder gets created by itself.
-mlproject.egg-info --> now we can use these package anywhere if we deploy it in py py.
+    data_ingestion --> reading the data
+    data_transformation --> encoding, missing values and all that
+    model_trainer --> train/test split, confusionnmatrices etc logic will be here
+
+7) inside src folder --> pipeline folder.
+   inside src folder --> logger.py file, exception.py, utils.py files 
+   utlis.py --> create mongoDB client, or anything which will be used by the ENTIRE project,
+   we'll write that inside this file.
+
+   
