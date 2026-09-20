@@ -47,4 +47,20 @@ so, -e . --> this will trigger the setup.py file.
    utlis.py --> create mongoDB client, or anything which will be used by the ENTIRE project,
    we'll write that inside this file.
 
-   
+8) run python -m src.components.data_ingestion.
+    artifacts and log folder gets created.
+
+9) create app.py file in the main folder. set up flask in there.
+    create necessary templates folder.
+
+10) Run python app.py --> on http://127.0.0.1:5000 --> indedx page
+    http://127.0.0.1:5000/predictdata --> form and prediction
+
+11) DEPLOYMENT ON AWS:
+    - create .ebextensions folder --> inside it, python.config file
+    - create an application.py file, and copy everything from app.py to application.py
+    (this is done because "WSGIPath: application:application" this line in python.config expects a file with "application" name only)
+    (this is done for deployment purposes only)
+    (also, REMOVE debug=True in application.py file). When deploying --> this MUST be done!!
+
+    
