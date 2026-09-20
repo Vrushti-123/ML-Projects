@@ -63,4 +63,18 @@ so, -e . --> this will trigger the setup.py file.
     (this is done for deployment purposes only)
     (also, REMOVE debug=True in application.py file). When deploying --> this MUST be done!!
 
-    
+12) Go to AWS Management Console online
+    - Sign in to console
+    - Go to Elastic Beanstalk
+    - Create application --> then from there, create environment.
+
+    - Then search for "Codepipeline" in AWS Management console.
+    - Codepipeline -> Pipelines -> create new pipeline
+    - Select build custom pipeline. 
+    - then choose source provider --> GitHub via App
+    - then write connection name, then repo name. as: Vrushti-123/ML-Projects
+    - default branch --> main
+    - right now, skip build stage and test stage
+    - then deploy provider --> AWS Elastic Beanstalk
+    - then write the application and environment name and then deploy :)
+    - 

@@ -56,3 +56,60 @@ def predict_datapoint():
 
 if __name__=="__main__":
     app.run(host="0.0.0.0")        
+
+
+'''
+                    BROWSER
+                       │
+                       │ GET /
+                       ▼
+                ┌──────────────┐
+                │  index.html  │
+                └──────────────┘
+                       │
+                       │
+                       ▼
+                 /predictdata
+                       │
+                       │ GET
+                       ▼
+                ┌──────────────┐
+                │   home.html  │
+                │  Input Form  │
+                └──────────────┘
+                       │
+                       │ POST
+                       │ form data
+                       ▼
+              ┌──────────────────┐
+              │ Flask receives   │
+              │ request.form     │
+              └────────┬─────────┘
+                       │
+                       ▼
+              ┌──────────────────┐
+              │   CustomData     │
+              └────────┬─────────┘
+                       │
+                       ▼
+                 Pandas DataFrame
+                       │
+                       ▼
+              ┌──────────────────┐
+              │ PredictPipeline  │
+              └────────┬─────────┘
+                       │
+              ┌────────┴─────────┐
+              ▼                  ▼
+      preprocessor.pkl       model.pkl
+              │                  │
+              └────────┬─────────┘
+                       ▼
+                   Prediction
+                       │
+                       ▼
+                  home.html
+                       │
+                       ▼
+                Display Result
+'''
