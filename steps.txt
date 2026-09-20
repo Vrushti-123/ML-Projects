@@ -62,6 +62,7 @@ so, -e . --> this will trigger the setup.py file.
     (this is done because "WSGIPath: application:application" this line in python.config expects a file with "application" name only)
     (this is done for deployment purposes only)
     (also, REMOVE debug=True in application.py file). When deploying --> this MUST be done!!
+    - delete your app.py file because that leads to error in deployment. (documentation)
 
 12) Go to AWS Management Console online
     - Sign in to console
