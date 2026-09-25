@@ -94,3 +94,14 @@ components/
 ----------------
 pipeline/
 → "How do I combine those tasks into a complete workflow?"
+
+--------------------------------ECR IMAGES---------------------------------------------
+When we push any image on Docker-hub --> by default its public.
+But, when working for companies, this docker image will be private,
+so, in order for it to be private, in AWS you have to put it in an ECR instance.
+(ECR --> Fully managed docker container to manage, deploy, store docker images.)
+
+So, wtv image we have created over here, we will put it in ECR repository
+and from there, deployment will be done to the ec2 instance.
+
+----------------AWS------------------------------------

@@ -78,4 +78,21 @@ so, -e . --> this will trigger the setup.py file.
     - right now, skip build stage and test stage
     - then deploy provider --> AWS Elastic Beanstalk
     - then write the application and environment name and then deploy :)
-    - 
+    
+13) Creating a docker file:
+    - Create a "Dockerfile", and inside it, write the necessary content.
+    - Start docker desktop, once it starts, write this command in the vsc terminal:
+        "docker build -t student-performance-prediction ."
+    - write "docker images" --> see it in the list 
+    - also check from the docker app too.
+    - docker run -p 5000:5000 student-performance-prediction
+    - if not shown: go to url: http://localhost:5000
+
+    - docker login (to login into our dockerHub)
+    - docker tag student-performance-prediction vrushti-123/student-performance-prediction
+        this renames it to vrushti123/student-performance-prediction
+        we need our dockerhub username in front of it in order to push it to docker hub.
+    - docker push vrushti-123/student-performance-prediction:latest
+    - we dont need docker compose rn.
+
+14) 
